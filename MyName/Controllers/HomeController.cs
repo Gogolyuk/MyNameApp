@@ -9,8 +9,8 @@ namespace MyName.Controllers
         {
             if (name != null)
             {
-                Person.Name = name;
-                return View("HelloName", name);
+                PersonViewModel personName = new PersonViewModel() { Name = name };
+                return View("HelloName", personName);
             }
             return View();
         }
